@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "packer_ios/PackerClient.swift"
-            timestampString = "504106216.965337"
+            timestampString = "504114367.743433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "responseHandler(response:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,12 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "packer_ios/PackerClient.swift"
-            timestampString = "504104928.630405"
+            timestampString = "504114367.743433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "request(url:method:params:completionHandler:)"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "getExperiences(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "packer_ios/PackerClient.swift"
-            timestampString = "504105000.34709"
+            timestampString = "504114367.743433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "46"
-            endingLineNumber = "46"
-            landmarkName = "responseHandler(response:completionHandler:)"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
+            landmarkName = "getExperiences(completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,45 +74,45 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "packer_ios/PackerClient.swift"
-            timestampString = "504105002.049321"
+            timestampString = "504114367.743433"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "51"
-            endingLineNumber = "51"
-            landmarkName = "responseHandler(response:completionHandler:)"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "getExperiences(completionHandler:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "packer_ios.PackerClient.(responseHandler in _1AB48AE6D256074CB0FC91BD69B0418C) (response : Alamofire.DataResponse&lt;Any&gt;, completionHandler : (packer_ios.PackerClient.Result) -&gt; ()) -&gt; ()"
-                  moduleName = "packer_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raonivaladares/Projects/iOS/packer_ios/packer_ios/PackerClient.swift"
-                  timestampString = "504106726.172657"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "689">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "packer_ios.PackerClient.(responseHandler in _1AB48AE6D256074CB0FC91BD69B0418C) (response : Alamofire.DataResponse&lt;Any&gt;, completionHandler : (packer_ios.PackerClient.Result) -&gt; ()) -&gt; ()"
-                  moduleName = "packer_ios"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/raonivaladares/Projects/iOS/packer_ios/packer_ios/PackerClient.swift"
-                  timestampString = "504106726.175527"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "52"
-                  endingLineNumber = "52"
-                  offsetFromSymbolStart = "2868">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "packer_ios/PackerClient.swift"
+            timestampString = "504114422.931333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "getExperiences(completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "packer_ios/SearchViewController.swift"
+            timestampString = "504114457.28489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "handleSuccessGetExperiences(response:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

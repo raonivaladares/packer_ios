@@ -19,6 +19,7 @@
 		D1A5F99F1E0BE1F2005E0D0D /* packer_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F99E1E0BE1F2005E0D0D /* packer_iosUITests.swift */; };
 		D1A5F9AF1E0BE52A005E0D0D /* PackerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9AE1E0BE52A005E0D0D /* PackerClient.swift */; };
 		D1FBD6891E0C0C9B00810A5D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD6881E0C0C9B00810A5D /* Alert.swift */; };
+		D1FBD68D1E0C16CD00810A5D /* Experience.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD68C1E0C16CD00810A5D /* Experience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D1A5F9A01E0BE1F2005E0D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A5F9AE1E0BE52A005E0D0D /* PackerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackerClient.swift; sourceTree = "<group>"; };
 		D1FBD6881E0C0C9B00810A5D /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		D1FBD68C1E0C16CD00810A5D /* Experience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Experience.swift; sourceTree = "<group>"; };
 		FE1C9CC49D6249B2F424FF26 /* Pods-packer_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-packer_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-packer_iosTests/Pods-packer_iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +143,8 @@
 		D1A5F97D1E0BE1F2005E0D0D /* packer_ios */ = {
 			isa = PBXGroup;
 			children = (
+				D1FBD68B1E0C16AB00810A5D /* Models */,
+				D1FBD68A1E0C0F7700810A5D /* Util */,
 				D1A5F9AD1E0BE4EF005E0D0D /* Services */,
 				D1A5F9AC1E0BE4DD005E0D0D /* ViewControllers */,
 				D1A5F97E1E0BE1F2005E0D0D /* AppDelegate.swift */,
@@ -148,7 +152,6 @@
 				D1A5F9851E0BE1F2005E0D0D /* Assets.xcassets */,
 				D1A5F9871E0BE1F2005E0D0D /* LaunchScreen.storyboard */,
 				D1A5F98A1E0BE1F2005E0D0D /* Info.plist */,
-				D1FBD6881E0C0C9B00810A5D /* Alert.swift */,
 			);
 			path = packer_ios;
 			sourceTree = "<group>";
@@ -185,6 +188,22 @@
 				D1A5F9AE1E0BE52A005E0D0D /* PackerClient.swift */,
 			);
 			name = Services;
+			sourceTree = "<group>";
+		};
+		D1FBD68A1E0C0F7700810A5D /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				D1FBD6881E0C0C9B00810A5D /* Alert.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		D1FBD68B1E0C16AB00810A5D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D1FBD68C1E0C16CD00810A5D /* Experience.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -474,6 +493,7 @@
 				D1A5F9AF1E0BE52A005E0D0D /* PackerClient.swift in Sources */,
 				D1A5F9811E0BE1F2005E0D0D /* SearchViewController.swift in Sources */,
 				D1FBD6891E0C0C9B00810A5D /* Alert.swift in Sources */,
+				D1FBD68D1E0C16CD00810A5D /* Experience.swift in Sources */,
 				D1A5F97F1E0BE1F2005E0D0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

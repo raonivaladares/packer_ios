@@ -5,7 +5,7 @@ import SwiftyJSON
 class PackerClient {
   enum Result {
     case error(title: String, message: String)
-    case success(response: JSON)
+    case success(response: Any)
   }
   
   private var headers: [String: String] = [:]
@@ -24,10 +24,31 @@ class PackerClient {
   // MARK: Public methods
   // ---------------------------------------------------------------------------
   func search(text: String, completionHandler: @escaping (Result) -> Void) {
-    
     return request(url: self.baseURL + "/api/search?q=" + text,
                    method: .get,
                    completionHandler: completionHandler)
+  }
+  
+  func getExperiences(completionHandler: @escaping (Result) -> Void) {
+    request(url: self.baseURL + "/api/search?q=",
+            method: .get) { result in
+              switch(result) {
+              case .success(let response):
+                let response = response as! JSON
+                var experiences = [Experience]()
+                if let experiencesResponse = response["experiences"].array {
+                  for  item in experiencesResponse {
+                    if let slug = item["slug"].string, let totalHits = item["total_hits"].int, let url = item["url"].string, let photoUrl = item["photo_url"].string {
+                      let experience = Experience(slug: slug, totalHits: totalHits, url: url, photoUrl: photoUrl)
+                      experiences.append(experience)
+                    }
+                  }
+                }
+                return completionHandler(.success(response: experiences))
+              case .error(let title, let message):
+                return completionHandler(.error(title: title, message: message))
+              }
+    }
   }
   
   // ---------------------------------------------------------------------------
