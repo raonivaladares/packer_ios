@@ -8,8 +8,8 @@ class PackerClient {
     case success(response: JSON)
   }
   
-  var headers: [String: String] = [:]
-  var baseURL = "https://staging-worldpackersplatform.herokuapp.com"
+  private var headers: [String: String] = [:]
+  private var baseURL = "https://staging-worldpackersplatform.herokuapp.com"
   static let instance = PackerClient()
   
   // ---------------------------------------------------------------------------
@@ -26,7 +26,7 @@ class PackerClient {
   func search(text: String, completionHandler: @escaping (Result) -> Void) {
     
     return request(url: self.baseURL + "/api/search?q=" + text,
-                   method: .post,
+                   method: .get,
                    completionHandler: completionHandler)
   }
   
@@ -35,9 +35,7 @@ class PackerClient {
   // ---------------------------------------------------------------------------
   private func request(url: String, method: Alamofire.HTTPMethod,
                        params: [String : AnyObject]? = nil,
-                       headers: [String: String]? = nil,
                        completionHandler: @escaping (Result) -> Void) {
-    let headers = headers ?? self.headers
     Alamofire.request(url, method: method, parameters: params, headers: headers)
       .responseJSON { response in
         self.responseHandler(response: response, completionHandler: completionHandler)
@@ -52,13 +50,11 @@ class PackerClient {
     let responseResult = JSON(data: response.data!)
     
     if ((response.response?.statusCode)! >= 200 && (response.response?.statusCode)! < 300) {
-      
       return completionHandler(.success(response: responseResult))
     }
     
     if (response.response?.statusCode == 422) {
       let message = "Parece que os servidores estão um pouco instáveis, tente novamente em instantes."
-      
       return completionHandler(.error(title: "Atenção", message: message))
     }
   }
