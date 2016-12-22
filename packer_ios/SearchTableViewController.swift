@@ -1,16 +1,15 @@
 import UIKit
 import SwiftyJSON
 
-class SearchViewController: UIViewController {
+class SearchTableViewController: UITableViewController {
   
-  @IBOutlet private weak var searchTextField: UITextField!
+  var experiences = [Experience]()
   
   // ---------------------------------------------------------------------------
   // MARK: View life-cycle
   // ---------------------------------------------------------------------------
   override func viewDidLoad() {
     super.viewDidLoad()
-    
     Alert.showProgress()
     PackerClient.instance.getExperiences() { result in
       Alert.hideProgress()
@@ -22,10 +21,26 @@ class SearchViewController: UIViewController {
   }
   
   // ---------------------------------------------------------------------------
-  // MARK: Action handlers
+  // MARK: UITableViewController
   // ---------------------------------------------------------------------------
-  @IBAction private func searchAction(_ sender: UIButton) {
-    let text = searchTextField.text!
+  override public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return experiences.count
+  }
+  
+  override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceTableViewCell", for: indexPath) as! ExperienceTableViewCell
+    cell.titleLabel.text = "a aaaa"
+    cell.subTitleLabel.text = "a aaaa"
+//    cell.backgroundImageView
+    
+    return cell
+    
+    
+    
+  }
+  
+  override public func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
   }
   
   // ---------------------------------------------------------------------------
@@ -33,6 +48,8 @@ class SearchViewController: UIViewController {
   // ---------------------------------------------------------------------------
   private func handleSuccessGetExperiences(response: [Experience]) {
     print(response)
+    experiences = response
+    self.tableView.reloadData()
   }
   
   private func handleSuccess(response: JSON) {

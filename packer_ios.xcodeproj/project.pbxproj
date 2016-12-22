@@ -10,8 +10,10 @@
 		287EACDCB4B6669107284E59 /* Pods_packer_iosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A665999879E1B3F4B65BA97 /* Pods_packer_iosUITests.framework */; };
 		34D1705F3A4E63C9D7C6D222 /* Pods_packer_iosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0711747474300FECB104B792 /* Pods_packer_iosTests.framework */; };
 		AC44E72B8928B265FCA7D592 /* Pods_packer_ios.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF2CB6410D3672B3B169D8FA /* Pods_packer_ios.framework */; };
+		D1645CBC1E0C59FF003A86E8 /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1645CBB1E0C59FF003A86E8 /* ExperienceTableViewCell.swift */; };
+		D1645CBF1E0C8CF4003A86E8 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1645CBE1E0C8CF4003A86E8 /* SearchTableViewCell.swift */; };
 		D1A5F97F1E0BE1F2005E0D0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F97E1E0BE1F2005E0D0D /* AppDelegate.swift */; };
-		D1A5F9811E0BE1F2005E0D0D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9801E0BE1F2005E0D0D /* SearchViewController.swift */; };
+		D1A5F9811E0BE1F2005E0D0D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9801E0BE1F2005E0D0D /* SearchTableViewController.swift */; };
 		D1A5F9841E0BE1F2005E0D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A5F9821E0BE1F2005E0D0D /* Main.storyboard */; };
 		D1A5F9861E0BE1F2005E0D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A5F9851E0BE1F2005E0D0D /* Assets.xcassets */; };
 		D1A5F9891E0BE1F2005E0D0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A5F9871E0BE1F2005E0D0D /* LaunchScreen.storyboard */; };
@@ -48,9 +50,11 @@
 		675ABC73CFB9BF83710AEBE0 /* Pods-packer_iosUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-packer_iosUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-packer_iosUITests/Pods-packer_iosUITests.release.xcconfig"; sourceTree = "<group>"; };
 		BF2CB6410D3672B3B169D8FA /* Pods_packer_ios.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_packer_ios.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C322CE13273595EAEF54D759 /* Pods-packer_iosTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-packer_iosTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-packer_iosTests/Pods-packer_iosTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D1645CBB1E0C59FF003A86E8 /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
+		D1645CBE1E0C8CF4003A86E8 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		D1A5F97B1E0BE1F2005E0D0D /* packer_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = packer_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A5F97E1E0BE1F2005E0D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D1A5F9801E0BE1F2005E0D0D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		D1A5F9801E0BE1F2005E0D0D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
 		D1A5F9831E0BE1F2005E0D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1A5F9851E0BE1F2005E0D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A5F9881E0BE1F2005E0D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -118,6 +122,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D1645CBD1E0C8CBF003A86E8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D1645CBB1E0C59FF003A86E8 /* ExperienceTableViewCell.swift */,
+				D1645CBE1E0C8CF4003A86E8 /* SearchTableViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		D1A5F9721E0BE1F2005E0D0D = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +190,8 @@
 		D1A5F9AC1E0BE4DD005E0D0D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				D1A5F9801E0BE1F2005E0D0D /* SearchViewController.swift */,
+				D1645CBD1E0C8CBF003A86E8 /* Cells */,
+				D1A5F9801E0BE1F2005E0D0D /* SearchTableViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -491,10 +505,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A5F9AF1E0BE52A005E0D0D /* PackerClient.swift in Sources */,
-				D1A5F9811E0BE1F2005E0D0D /* SearchViewController.swift in Sources */,
+				D1A5F9811E0BE1F2005E0D0D /* SearchTableViewController.swift in Sources */,
 				D1FBD6891E0C0C9B00810A5D /* Alert.swift in Sources */,
 				D1FBD68D1E0C16CD00810A5D /* Experience.swift in Sources */,
 				D1A5F97F1E0BE1F2005E0D0D /* AppDelegate.swift in Sources */,
+				D1645CBC1E0C59FF003A86E8 /* ExperienceTableViewCell.swift in Sources */,
+				D1645CBF1E0C8CF4003A86E8 /* SearchTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
