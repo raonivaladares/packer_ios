@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		D1A5F97F1E0BE1F2005E0D0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F97E1E0BE1F2005E0D0D /* AppDelegate.swift */; };
-		D1A5F9811E0BE1F2005E0D0D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9801E0BE1F2005E0D0D /* ViewController.swift */; };
+		D1A5F9811E0BE1F2005E0D0D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9801E0BE1F2005E0D0D /* SearchViewController.swift */; };
 		D1A5F9841E0BE1F2005E0D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A5F9821E0BE1F2005E0D0D /* Main.storyboard */; };
 		D1A5F9861E0BE1F2005E0D0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A5F9851E0BE1F2005E0D0D /* Assets.xcassets */; };
 		D1A5F9891E0BE1F2005E0D0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A5F9871E0BE1F2005E0D0D /* LaunchScreen.storyboard */; };
 		D1A5F9941E0BE1F2005E0D0D /* packer_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9931E0BE1F2005E0D0D /* packer_iosTests.swift */; };
 		D1A5F99F1E0BE1F2005E0D0D /* packer_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F99E1E0BE1F2005E0D0D /* packer_iosUITests.swift */; };
+		D1A5F9AF1E0BE52A005E0D0D /* PackerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9AE1E0BE52A005E0D0D /* PackerClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		D1A5F97B1E0BE1F2005E0D0D /* packer_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = packer_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A5F97E1E0BE1F2005E0D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D1A5F9801E0BE1F2005E0D0D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D1A5F9801E0BE1F2005E0D0D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		D1A5F9831E0BE1F2005E0D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D1A5F9851E0BE1F2005E0D0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A5F9881E0BE1F2005E0D0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		D1A5F99A1E0BE1F2005E0D0D /* packer_iosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = packer_iosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A5F99E1E0BE1F2005E0D0D /* packer_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packer_iosUITests.swift; sourceTree = "<group>"; };
 		D1A5F9A01E0BE1F2005E0D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A5F9AE1E0BE52A005E0D0D /* PackerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackerClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +99,9 @@
 		D1A5F97D1E0BE1F2005E0D0D /* packer_ios */ = {
 			isa = PBXGroup;
 			children = (
+				D1A5F9AD1E0BE4EF005E0D0D /* Services */,
+				D1A5F9AC1E0BE4DD005E0D0D /* ViewControllers */,
 				D1A5F97E1E0BE1F2005E0D0D /* AppDelegate.swift */,
-				D1A5F9801E0BE1F2005E0D0D /* ViewController.swift */,
 				D1A5F9821E0BE1F2005E0D0D /* Main.storyboard */,
 				D1A5F9851E0BE1F2005E0D0D /* Assets.xcassets */,
 				D1A5F9871E0BE1F2005E0D0D /* LaunchScreen.storyboard */,
@@ -123,6 +126,22 @@
 				D1A5F9A01E0BE1F2005E0D0D /* Info.plist */,
 			);
 			path = packer_iosUITests;
+			sourceTree = "<group>";
+		};
+		D1A5F9AC1E0BE4DD005E0D0D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1A5F9801E0BE1F2005E0D0D /* SearchViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D1A5F9AD1E0BE4EF005E0D0D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D1A5F9AE1E0BE52A005E0D0D /* PackerClient.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,7 +281,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1A5F9811E0BE1F2005E0D0D /* ViewController.swift in Sources */,
+				D1A5F9AF1E0BE52A005E0D0D /* PackerClient.swift in Sources */,
+				D1A5F9811E0BE1F2005E0D0D /* SearchViewController.swift in Sources */,
 				D1A5F97F1E0BE1F2005E0D0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

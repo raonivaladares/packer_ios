@@ -1,14 +1,6 @@
-//
-//  ViewController.swift
-//  packer_ios
-//
-//  Created by Raoni Valadares on 12/22/16.
-//  Copyright © 2016 rov. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class SearchViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
