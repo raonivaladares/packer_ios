@@ -18,6 +18,7 @@
 		D1A5F9941E0BE1F2005E0D0D /* packer_iosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9931E0BE1F2005E0D0D /* packer_iosTests.swift */; };
 		D1A5F99F1E0BE1F2005E0D0D /* packer_iosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F99E1E0BE1F2005E0D0D /* packer_iosUITests.swift */; };
 		D1A5F9AF1E0BE52A005E0D0D /* PackerClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9AE1E0BE52A005E0D0D /* PackerClient.swift */; };
+		D1FBD6891E0C0C9B00810A5D /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FBD6881E0C0C9B00810A5D /* Alert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		D1A5F99E1E0BE1F2005E0D0D /* packer_iosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = packer_iosUITests.swift; sourceTree = "<group>"; };
 		D1A5F9A01E0BE1F2005E0D0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A5F9AE1E0BE52A005E0D0D /* PackerClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PackerClient.swift; sourceTree = "<group>"; };
+		D1FBD6881E0C0C9B00810A5D /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		FE1C9CC49D6249B2F424FF26 /* Pods-packer_iosTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-packer_iosTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-packer_iosTests/Pods-packer_iosTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -146,6 +148,7 @@
 				D1A5F9851E0BE1F2005E0D0D /* Assets.xcassets */,
 				D1A5F9871E0BE1F2005E0D0D /* LaunchScreen.storyboard */,
 				D1A5F98A1E0BE1F2005E0D0D /* Info.plist */,
+				D1FBD6881E0C0C9B00810A5D /* Alert.swift */,
 			);
 			path = packer_ios;
 			sourceTree = "<group>";
@@ -470,6 +473,7 @@
 			files = (
 				D1A5F9AF1E0BE52A005E0D0D /* PackerClient.swift in Sources */,
 				D1A5F9811E0BE1F2005E0D0D /* SearchViewController.swift in Sources */,
+				D1FBD6891E0C0C9B00810A5D /* Alert.swift in Sources */,
 				D1A5F97F1E0BE1F2005E0D0D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -727,6 +731,7 @@
 				D1A5F9A51E0BE1F2005E0D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1A5F9A61E0BE1F2005E0D0D /* Build configuration list for PBXNativeTarget "packer_iosTests" */ = {
 			isa = XCConfigurationList;
@@ -735,6 +740,7 @@
 				D1A5F9A81E0BE1F2005E0D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1A5F9A91E0BE1F2005E0D0D /* Build configuration list for PBXNativeTarget "packer_iosUITests" */ = {
 			isa = XCConfigurationList;
@@ -743,6 +749,7 @@
 				D1A5F9AB1E0BE1F2005E0D0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
