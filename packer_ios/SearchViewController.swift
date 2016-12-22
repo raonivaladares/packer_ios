@@ -17,7 +17,9 @@ class SearchViewController: UIViewController {
   // ---------------------------------------------------------------------------
   @IBAction private func searchAction(_ sender: UIButton) {
     let text = searchTextField.text!
+    Alert.showProgress()
     PackerClient.instance.search(text: text) { result in
+      Alert.hideProgress()
       switch(result) {
       case .success(let response): self.handleSuccess(response: response)
       case .error(let title, let message): self.handleError(title: title, message: message)

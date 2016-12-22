@@ -1,4 +1,5 @@
 import UIKit
+import PKHUD
 
 struct Alert {
   static func message(viewController: UIViewController, title: String, message: String, completion: (() -> Void)? = nil) {
@@ -7,5 +8,13 @@ struct Alert {
     
     alertController.addAction(okAction)
     viewController.present(alertController, animated: true, completion: nil)
+  }
+  
+  static func showProgress() {
+    HUD.show(.progress)
+  }
+  
+  static func hideProgress() {
+    HUD.hide()
   }
 }
