@@ -20,6 +20,17 @@ class SearchTableViewController: UITableViewController {
       }
     }
   }
+  @IBAction func searchAction(_ sender: UITextField) {
+    Alert.showProgress()
+    let text = sender.text!
+    PackerClient.instance.search(text: text) { result in
+      Alert.hideProgress()
+      switch(result) {
+      case .success(let response): self.handleSuccess(response: response as! JSON)
+      case .error(let title, let message): self.handleError(title: title, message: message)
+      }
+    }
+  }
   
   // ---------------------------------------------------------------------------
   // MARK: UITableViewController
@@ -29,13 +40,19 @@ class SearchTableViewController: UITableViewController {
   }
   
   override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    if (indexPath.row == 0) {
+      let cell = tableView.dequeueReusableCell(withIdentifier: "SearchTableViewCell", for: indexPath) as! SearchTableViewCell
+      return cell
+    }
+    
     let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceTableViewCell", for: indexPath) as! ExperienceTableViewCell
     if let experienceInfo = Experience.experienceInfo(slug: experiences[indexPath.row].slug!) {
       cell.titleLabel.text = experienceInfo.title
       cell.subTitleLabel.text = experienceInfo.subTitle
     }
-    let url = URL(string: experiences[indexPath.row].photoUrl!)
-    cell.backgroundImageView.sd_setImage(with: url)
+    if let url = URL(string: experiences[indexPath.row].photoUrl!) {
+      cell.backgroundImageView.sd_setImage(with: url)
+    }
     
     return cell
   }
