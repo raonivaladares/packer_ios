@@ -9,6 +9,7 @@ target 'packer_ios' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
   pod 'PKHUD', '~> 4.0'
+  pod 'SDWebImage', '~>3.8'
   
   target 'packer_iosTests' do
     inherit! :search_paths
