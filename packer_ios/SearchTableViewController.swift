@@ -1,5 +1,6 @@
 import UIKit
 import SwiftyJSON
+import SDWebImage
 
 class SearchTableViewController: UITableViewController {
   
@@ -29,9 +30,11 @@ class SearchTableViewController: UITableViewController {
   
   override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceTableViewCell", for: indexPath) as! ExperienceTableViewCell
-    cell.titleLabel.text = "a aaaa"
+    cell.titleLabel.text = experiences[indexPath.row].slug
     cell.subTitleLabel.text = "a aaaa"
-//    cell.backgroundImageView
+    
+    let url = URL(string: experiences[indexPath.row].photoUrl!)
+    cell.backgroundImageView.sd_setImage(with: url)
     
     return cell
     
