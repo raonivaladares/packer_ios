@@ -30,16 +30,14 @@ class SearchTableViewController: UITableViewController {
   
   override public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceTableViewCell", for: indexPath) as! ExperienceTableViewCell
-    cell.titleLabel.text = experiences[indexPath.row].slug
-    cell.subTitleLabel.text = "a aaaa"
-    
+    if let experienceInfo = Experience.experienceInfo(slug: experiences[indexPath.row].slug!) {
+      cell.titleLabel.text = experienceInfo.title
+      cell.subTitleLabel.text = experienceInfo.subTitle
+    }
     let url = URL(string: experiences[indexPath.row].photoUrl!)
     cell.backgroundImageView.sd_setImage(with: url)
     
     return cell
-    
-    
-    
   }
   
   override public func numberOfSections(in tableView: UITableView) -> Int {
