@@ -20,6 +20,21 @@ class SearchTableViewController: UITableViewController {
       }
     }
   }
+  
+  // ---------------------------------------------------------------------------
+  // MARK: Segue
+  // ---------------------------------------------------------------------------
+  override internal func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "" {
+      if let viewController = segue.destination as? ResultTableViewController {
+        
+      }
+    }
+  }
+  
+  // ---------------------------------------------------------------------------
+  // MARK: Action handlers
+  // ---------------------------------------------------------------------------
   @IBAction func searchAction(_ sender: UITextField) {
     Alert.showProgress()
     let text = sender.text!
@@ -78,4 +93,3 @@ class SearchTableViewController: UITableViewController {
     print(message)
   }
 }
-
