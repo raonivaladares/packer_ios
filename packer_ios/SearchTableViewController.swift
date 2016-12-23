@@ -25,9 +25,9 @@ class SearchTableViewController: UITableViewController {
   // MARK: Segue
   // ---------------------------------------------------------------------------
   override internal func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "" {
+    if segue.identifier == "showResultsSegue" {
       if let viewController = segue.destination as? ResultTableViewController {
-        
+        viewController.viewTitle = "ABA"
       }
     }
   }
@@ -87,6 +87,7 @@ class SearchTableViewController: UITableViewController {
   
   private func handleSuccess(response: JSON) {
     print(response)
+    performSegue(withIdentifier: "showResultsSegue", sender: self)
   }
   
   private func handleError(title: String, message: String) {

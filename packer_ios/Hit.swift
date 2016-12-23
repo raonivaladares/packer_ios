@@ -1,6 +1,6 @@
 import Foundation
 
-class Hits {
+class Hit {
   var id: Int?
   var rating: Int?
   var mealsCount: Int?

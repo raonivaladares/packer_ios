@@ -13,7 +13,8 @@
 		D1645CBC1E0C59FF003A86E8 /* ExperienceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1645CBB1E0C59FF003A86E8 /* ExperienceTableViewCell.swift */; };
 		D1645CBF1E0C8CF4003A86E8 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1645CBE1E0C8CF4003A86E8 /* SearchTableViewCell.swift */; };
 		D1645CC11E0D4F4E003A86E8 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1645CC01E0D4F4E003A86E8 /* ResultTableViewController.swift */; };
-		D1645CC31E0D51D1003A86E8 /* Hits.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1645CC21E0D51D1003A86E8 /* Hits.swift */; };
+		D1645CC31E0D51D1003A86E8 /* Hit.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1645CC21E0D51D1003A86E8 /* Hit.swift */; };
+		D1645CC51E0DE0A1003A86E8 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1645CC41E0DE0A1003A86E8 /* ResultTableViewCell.swift */; };
 		D1A5F97F1E0BE1F2005E0D0D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F97E1E0BE1F2005E0D0D /* AppDelegate.swift */; };
 		D1A5F9811E0BE1F2005E0D0D /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A5F9801E0BE1F2005E0D0D /* SearchTableViewController.swift */; };
 		D1A5F9841E0BE1F2005E0D0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A5F9821E0BE1F2005E0D0D /* Main.storyboard */; };
@@ -55,7 +56,8 @@
 		D1645CBB1E0C59FF003A86E8 /* ExperienceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExperienceTableViewCell.swift; sourceTree = "<group>"; };
 		D1645CBE1E0C8CF4003A86E8 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		D1645CC01E0D4F4E003A86E8 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
-		D1645CC21E0D51D1003A86E8 /* Hits.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hits.swift; sourceTree = "<group>"; };
+		D1645CC21E0D51D1003A86E8 /* Hit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hit.swift; sourceTree = "<group>"; };
+		D1645CC41E0DE0A1003A86E8 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
 		D1A5F97B1E0BE1F2005E0D0D /* packer_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = packer_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A5F97E1E0BE1F2005E0D0D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A5F9801E0BE1F2005E0D0D /* SearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				D1645CBB1E0C59FF003A86E8 /* ExperienceTableViewCell.swift */,
 				D1645CBE1E0C8CF4003A86E8 /* SearchTableViewCell.swift */,
+				D1645CC41E0DE0A1003A86E8 /* ResultTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -221,7 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				D1FBD68C1E0C16CD00810A5D /* Experience.swift */,
-				D1645CC21E0D51D1003A86E8 /* Hits.swift */,
+				D1645CC21E0D51D1003A86E8 /* Hit.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -518,7 +521,8 @@
 				D1A5F97F1E0BE1F2005E0D0D /* AppDelegate.swift in Sources */,
 				D1645CBC1E0C59FF003A86E8 /* ExperienceTableViewCell.swift in Sources */,
 				D1645CBF1E0C8CF4003A86E8 /* SearchTableViewCell.swift in Sources */,
-				D1645CC31E0D51D1003A86E8 /* Hits.swift in Sources */,
+				D1645CC51E0DE0A1003A86E8 /* ResultTableViewCell.swift in Sources */,
+				D1645CC31E0D51D1003A86E8 /* Hit.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
