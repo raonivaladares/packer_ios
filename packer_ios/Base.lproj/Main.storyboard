@@ -26,11 +26,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="107"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Where to Travel to ?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHK-ib-4Pb">
-                                            <rect key="frame" x="8" y="39" width="359" height="30"/>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Where to Travel to ?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHK-ib-4Pb">
+                                            <rect key="frame" x="8" y="40.5" width="359" height="27"/>
                                             <color key="textColor" red="0.2146448189909653" green="0.56640617156341411" blue="0.65592277486910988" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
                                             <connections>
                                                 <action selector="searchAction:" destination="8oI-Fo-GRO" eventType="primaryActionTriggered" id="G85-k9-RhT"/>
                                             </connections>
