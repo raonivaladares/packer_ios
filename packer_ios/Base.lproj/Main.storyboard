@@ -140,39 +140,22 @@
                                                                     <color key="textColor" red="0.21464481899999999" green="0.56640617159999995" blue="0.65592277489999995" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MSZ-cf-KNP">
-                                                                    <rect key="frame" x="0.0" y="30.5" width="345" height="20.5"/>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="MSZ-cf-KNP">
+                                                                    <rect key="frame" x="0.0" y="30.5" width="99.5" height="20.5"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="City, Country" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yRE-gJ-8fh">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="204" height="20.5"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="width" constant="204" id="BqB-NV-AjV"/>
-                                                                            </constraints>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="99.5" height="20.5"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                             <nil key="textColor"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
-                                                                        <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="260" verticalHuggingPriority="260" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="BR0-sq-krz">
-                                                                            <rect key="frame" x="204" y="0.0" width="141" height="20.5"/>
-                                                                            <subviews>
-                                                                                <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-MM-G5r" customClass="CosmosView" customModule="Cosmos">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="20.5"/>
-                                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                                                </view>
-                                                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(n)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cBP-AY-XTb">
-                                                                                    <rect key="frame" x="120" y="0.0" width="21" height="20.5"/>
-                                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                                    <nil key="textColor"/>
-                                                                                    <nil key="highlightedColor"/>
-                                                                                </label>
-                                                                            </subviews>
-                                                                        </stackView>
+                                                                        <view hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dqk-MM-G5r" customClass="CosmosView" customModule="Cosmos">
+                                                                            <rect key="frame" x="99.5" y="0.0" width="0.0" height="20.5"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                                        </view>
                                                                     </subviews>
                                                                 </stackView>
                                                             </subviews>
-                                                            <constraints>
-                                                                <constraint firstAttribute="trailing" secondItem="MSZ-cf-KNP" secondAttribute="trailing" constant="10" id="Sac-3L-ZR3"/>
-                                                            </constraints>
                                                         </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,7 +185,6 @@
                                 <connections>
                                     <outlet property="coverImageView" destination="Tpj-50-54j" id="rcd-Bb-gsg"/>
                                     <outlet property="placeLabel" destination="yRE-gJ-8fh" id="ip2-R8-THV"/>
-                                    <outlet property="ratingQtdLabel" destination="cBP-AY-XTb" id="Tlu-BC-aGP"/>
                                     <outlet property="ratingView" destination="Dqk-MM-G5r" id="CU8-zm-cVi"/>
                                     <outlet property="titleLabel" destination="LJW-KC-KpS" id="XZq-UY-OEH"/>
                                 </connections>

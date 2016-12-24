@@ -11,11 +11,14 @@ class Hit {
   var price: Int
   var photoUrl: String
   var reviewsCount: Int
-  var city: String
+  private var city: String
   var hostingSince: String
   var teaserBadge: String
-  var country: String
+  private var country: String
   var tripsCount: Int
+  var local: String {
+    return city + ", " + country
+  }
   
   init(id: Int,
        rating: Int?,

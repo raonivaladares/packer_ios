@@ -32,9 +32,8 @@ class ResultTableViewController: UITableViewController {
     if let rating = hits?[indexPath.row].rating {
       cell.ratingView.rating = Double(rating)
       cell.ratingView.isHidden = false
-      cell.ratingQtdLabel.text = String((hits?[indexPath.row].reviewsCount)!)
-      cell.ratingQtdLabel.isHidden = false
     }
+    cell.placeLabel.text = hits?[indexPath.row].local
     return cell
   }
   
