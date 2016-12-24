@@ -5,6 +5,7 @@ import SDWebImage
 class SearchTableViewController: UITableViewController {
   
   var experiences = [Experience]()
+  var hits: [Hit]?
   
   // ---------------------------------------------------------------------------
   // MARK: View life-cycle
@@ -28,6 +29,7 @@ class SearchTableViewController: UITableViewController {
     if segue.identifier == "showResultsSegue" {
       if let viewController = segue.destination as? ResultTableViewController {
         viewController.viewTitle = "ABA"
+        viewController.hits = hits
       }
     }
   }
@@ -87,6 +89,7 @@ class SearchTableViewController: UITableViewController {
   
   private func handleSuccess(response: [Hit]) {
     print(response)
+    hits = response
     performSegue(withIdentifier: "showResultsSegue", sender: self)
   }
   
