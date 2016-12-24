@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '04E736CA381AEBCA9B6809385CA02BDC'
-               BlueprintName = 'SwiftyJSON'
+               BlueprintIdentifier = '2F0FE1E2A5B1EF15139E10A40F05CE94'
+               BlueprintName = 'Cosmos'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyJSON.framework'>
+               BuildableName = 'Cosmos.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

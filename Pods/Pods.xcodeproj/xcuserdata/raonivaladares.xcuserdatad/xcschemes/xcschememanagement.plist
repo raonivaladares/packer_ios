@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Cosmos.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>PKHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +47,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>850DF9E2145E823789BCC68D88B96327</key>
+		<key>04E736CA381AEBCA9B6809385CA02BDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>2F0FE1E2A5B1EF15139E10A40F05CE94</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6508C456E173DC3FB2E6B547A2DD3F49</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,22 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9FC4B70A4C00F2C3D186C15BE70300A3</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A2A65E5D9E67C14FABC05C12F991B8CA</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>BB74903B15F5D78586682EF62F6E0926</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>D7A75F149082140741FC1E0B5B2863C8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FDCA1F3837038C7AA5867129485398D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -26,6 +26,15 @@ class ResultTableViewController: UITableViewController {
     if let url = URL(string: (hits?[indexPath.row].photoUrl)!) {
       cell.coverImageView.sd_setImage(with: url)
     }
+    if let title = hits?[indexPath.row].title {
+      cell.titleLabel.text = title
+    }
+    if let rating = hits?[indexPath.row].rating {
+      cell.ratingView.rating = Double(rating)
+      cell.ratingView.isHidden = false
+      cell.ratingQtdLabel.text = String((hits?[indexPath.row].reviewsCount)!)
+      cell.ratingQtdLabel.isHidden = false
+    }
     return cell
   }
   

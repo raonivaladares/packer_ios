@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (4.1.0)
+  - Cosmos (7.0.0)
   - PKHUD (4.0.0)
   - SDWebImage (3.8.2):
     - SDWebImage/Core (= 3.8.2)
@@ -8,16 +9,18 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (~> 4.0)
+  - Cosmos (~> 7.0)
   - PKHUD (~> 4.0)
   - SDWebImage (~> 3.8)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: e266cf991b933498df791e645e0d8ac294492153
+  Cosmos: 2c8299147138758f6ebbb247cf1aeed77998bdf9
   PKHUD: 2bb45c936bb8afa39f3cd33ec14e8cc89f624255
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SwiftyJSON: 38a8ea2006779c0fc4c310cb2ee8195327740faf
 
-PODFILE CHECKSUM: eda26d6e640f84b902e2ef6be279d2482529a43b
+PODFILE CHECKSUM: 370afbfe8144d2bed0260bed690e3cac3fc3e568
 
 COCOAPODS: 1.1.1

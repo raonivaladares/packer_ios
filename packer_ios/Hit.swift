@@ -2,7 +2,7 @@ import Foundation
 
 class Hit {
   var id: Int
-  var rating: Int
+  var rating: Int?
   var mealsCount: Int
   var url: String
   var accommodationTypeSlug: String
@@ -34,7 +34,7 @@ class Hit {
        tripsCount: Int ) {
     
     self.id = id
-    self.rating = rating ?? 0
+    self.rating = rating
     self.mealsCount = mealsCount
     self.url = url
     self.accommodationTypeSlug = accommodationTypeSlug

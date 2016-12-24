@@ -10,6 +10,7 @@ target 'packer_ios' do
   pod 'SwiftyJSON'
   pod 'PKHUD', '~> 4.0'
   pod 'SDWebImage', '~>3.8'
+  pod 'Cosmos', '~> 7.0'
   
   target 'packer_iosTests' do
     inherit! :search_paths
