@@ -41,7 +41,7 @@ class SearchTableViewController: UITableViewController {
     PackerClient.instance.search(text: text) { result in
       Alert.hideProgress()
       switch(result) {
-      case .success(let response): self.handleSuccess(response: response as! JSON)
+      case .success(let response): self.handleSuccess(response: response as! [Hit])
       case .error(let title, let message): self.handleError(title: title, message: message)
       }
     }
@@ -61,11 +61,11 @@ class SearchTableViewController: UITableViewController {
     }
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "ExperienceTableViewCell", for: indexPath) as! ExperienceTableViewCell
-    if let experienceInfo = Experience.experienceInfo(slug: experiences[indexPath.row].slug!) {
+    if let experienceInfo = Experience.experienceInfo(slug: experiences[indexPath.row].slug) {
       cell.titleLabel.text = experienceInfo.title
       cell.subTitleLabel.text = experienceInfo.subTitle
     }
-    if let url = URL(string: experiences[indexPath.row].photoUrl!) {
+    if let url = URL(string: experiences[indexPath.row].photoUrl) {
       cell.backgroundImageView.sd_setImage(with: url)
     }
     
@@ -85,7 +85,7 @@ class SearchTableViewController: UITableViewController {
     self.tableView.reloadData()
   }
   
-  private func handleSuccess(response: JSON) {
+  private func handleSuccess(response: [Hit]) {
     print(response)
     performSegue(withIdentifier: "showResultsSegue", sender: self)
   }
