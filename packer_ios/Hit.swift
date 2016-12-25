@@ -40,7 +40,7 @@ class Hit {
     self.rating = rating
     self.mealsCount = mealsCount
     self.url = url
-    self.accommodationTypeSlug = accommodationTypeSlug
+    self.accommodationTypeSlug = Hit.accommodationType(accommodationTypeSlug: accommodationTypeSlug)
     self.wishListCount = wishListCount
     self.title = title ?? ""
     self.price = price
@@ -51,5 +51,17 @@ class Hit {
     self.teaserBadge = teaserBadge
     self.country = country
     self.tripsCount = tripsCount
+  }
+  
+  private static func accommodationType(accommodationTypeSlug: String) -> String {
+    var aux: String
+    switch accommodationTypeSlug {
+    case "staff_dorm": aux = "Staff dorm"
+    case "shared_dorm": aux = "Shared dorm"
+    case "private_dorm": aux = "Private dorm"
+    default:
+      aux = accommodationTypeSlug
+    }
+    return aux
   }
 }
