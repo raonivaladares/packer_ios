@@ -34,6 +34,11 @@ class ResultTableViewController: UITableViewController {
       cell.ratingView.isHidden = false
     }
     cell.placeLabel.text = hits?[indexPath.row].local
+    cell.accommodationTypeLabel.text = hits?[indexPath.row].accommodationTypeSlug
+    cell.mealsCountLabel.text = hits?[indexPath.row].mealsCount.description
+    cell.wishListCountLabel.text = hits?[indexPath.row].wishListCount.description
+    cell.tripsCountLabel.text = hits?[indexPath.row].tripsCount.description
+    
     return cell
   }
   
