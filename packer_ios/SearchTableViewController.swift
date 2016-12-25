@@ -6,12 +6,18 @@ class SearchTableViewController: UITableViewController {
   
   var experiences = [Experience]()
   var hits: [Hit]?
+  var searchText: String?
   
   // ---------------------------------------------------------------------------
   // MARK: View life-cycle
   // ---------------------------------------------------------------------------
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    self.navigationController?.navigationBar.backgroundColor = UIColor.blue
+    self.navigationController?.navigationBar.barStyle = UIBarStyle.blackOpaque
+    self.navigationController?.navigationBar.tintColor = UIColor.white
+    
     Alert.showProgress()
     PackerClient.instance.getExperiences() { result in
       Alert.hideProgress()
@@ -28,7 +34,7 @@ class SearchTableViewController: UITableViewController {
   override internal func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showResultsSegue" {
       if let viewController = segue.destination as? ResultTableViewController {
-        viewController.viewTitle = "ABA"
+        viewController.viewTitle = searchText!
         viewController.hits = hits
       }
     }
@@ -39,8 +45,8 @@ class SearchTableViewController: UITableViewController {
   // ---------------------------------------------------------------------------
   @IBAction func searchAction(_ sender: UITextField) {
     Alert.showProgress()
-    let text = sender.text!
-    PackerClient.instance.search(text: text) { result in
+    searchText = sender.text!
+    PackerClient.instance.search(text: searchText!) { result in
       Alert.hideProgress()
       switch(result) {
       case .success(let response): self.handleSuccess(response: response as! [Hit])
