@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "packer_ios/PackerClient.swift"
-            timestampString = "504279623.522319"
+            filePath = "packer_ios/SearchViewController.swift"
+            timestampString = "504114457.28489"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "responseHandler(response:completionHandler:)"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "handleSuccessGetExperiences(response:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,14 +25,28 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "packer_ios/SearchViewController.swift"
-            timestampString = "504114457.28489"
+            filePath = "packer_ios/SearchTableViewController.swift"
+            timestampString = "504640141.070208"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "35"
-            endingLineNumber = "35"
-            landmarkName = "handleSuccessGetExperiences(response:)"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "packer_ios/PackerClient.swift"
+            timestampString = "504641945.441938"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "152"
+            endingLineNumber = "152">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

@@ -29,43 +29,21 @@ class PackerClient {
                     
                     switch(result) {
                     case .success(let response):
-                      let response = response as! JSON
-                      var hits = [Hit]()
-                      if let hitsResponse = response["hits"].array {
-                        for  item in hitsResponse {
-                          if let id = item["id"].int,
-                            let mealsCount = item["meals_count"].int,
-                            let url = item["url"].string,
-                            let accommodationTypeSlug = item["accommodation_type_slug"].string,
-                            let wishListCount = item["wish_list_count"].int,
-                            let price = item["price"].int,
-                            let photoUrl = item["photo_url"].string,
-                            let reviewsCount = item["reviews_count"].int,
-                            let city = item["city"].string,
-                            let hostingSince = item["hosting_since"].string,
-                            let teaserBadge = item["teaser_badge"].string,
-                            let country = item["country"].string,
-                            let tripsCount = item["trips_count"].int {
-                            
-                            let hit = Hit(id: id,
-                                          rating: item["rating"].int,
-                                          mealsCount: mealsCount,
-                                          url: url,
-                                          accommodationTypeSlug: accommodationTypeSlug,
-                                          wishListCount: wishListCount,
-                                          title: item["title"].string,
-                                          price: price,
-                                          photoUrl: photoUrl,
-                                          reviewsCount: reviewsCount,
-                                          city: city,
-                                          hostingSince: hostingSince,
-                                          teaserBadge: teaserBadge,
-                                          country: country,
-                                          tripsCount: tripsCount)
-                            hits.append(hit)
-                          }
-                        }
-                      }
+                      let hits = self.buildSearchResult(response: response as! JSON)
+                      return completionHandler(.success(response: hits))
+                    case .error(let title, let message):
+                      return completionHandler(.error(title: title, message: message))
+                    }
+    }
+  }
+  
+  func searchExperience(url: String, completionHandler: @escaping (Result) -> Void) {
+    return request(url: url,
+                   method: .get) { result in
+                    
+                    switch(result) {
+                    case .success(let response):
+                      let hits = self.buildSearchResult(response: response as! JSON)
                       return completionHandler(.success(response: hits))
                     case .error(let title, let message):
                       return completionHandler(.error(title: title, message: message))
@@ -105,6 +83,46 @@ class PackerClient {
   // ---------------------------------------------------------------------------
   // MARK: Private methods
   // ---------------------------------------------------------------------------
+  private func buildSearchResult(response: JSON) -> [Hit] {
+    var hits = [Hit]()
+    if let hitsResponse = response["hits"].array {
+      for  item in hitsResponse {
+        if let id = item["id"].int,
+          let mealsCount = item["meals_count"].int,
+          let url = item["url"].string,
+          let accommodationTypeSlug = item["accommodation_type_slug"].string,
+          let wishListCount = item["wish_list_count"].int,
+          let price = item["price"].int,
+          let photoUrl = item["photo_url"].string,
+          let reviewsCount = item["reviews_count"].int,
+          let city = item["city"].string,
+          let hostingSince = item["hosting_since"].string,
+          let teaserBadge = item["teaser_badge"].string,
+          let country = item["country"].string,
+          let tripsCount = item["trips_count"].int {
+          
+          let hit = Hit(id: id,
+                        rating: item["rating"].int,
+                        mealsCount: mealsCount,
+                        url: url,
+                        accommodationTypeSlug: accommodationTypeSlug,
+                        wishListCount: wishListCount,
+                        title: item["title"].string,
+                        price: price,
+                        photoUrl: photoUrl,
+                        reviewsCount: reviewsCount,
+                        city: city,
+                        hostingSince: hostingSince,
+                        teaserBadge: teaserBadge,
+                        country: country,
+                        tripsCount: tripsCount)
+          hits.append(hit)
+        }
+      }
+    }
+    return hits
+  }
+  
   private func request(url: String, method: Alamofire.HTTPMethod,
                        params: [String : AnyObject]? = nil,
                        completionHandler: @escaping (Result) -> Void) {

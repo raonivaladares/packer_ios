@@ -4,7 +4,7 @@ import SDWebImage
 
 class SearchTableViewController: UITableViewController {
   
-  var experiences = [Experience]()
+  var experiences = [Experience]() //Injectable
   var hits: [Hit]?
   var searchText: String?
   
@@ -82,6 +82,19 @@ class SearchTableViewController: UITableViewController {
   
   override public func numberOfSections(in tableView: UITableView) -> Int {
     return 1
+  }
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    if indexPath.row > 0 {
+      Alert.showProgress()
+      PackerClient.instance.searchExperience(url: experiences[indexPath.row].url) { result in
+        Alert.hideProgress()
+        switch(result) {
+        case .success(let response): print("ok")
+        case .error(let title, let message): self.handleError(title: title, message: message)
+        }
+      }
+    }
   }
   
   // ---------------------------------------------------------------------------
