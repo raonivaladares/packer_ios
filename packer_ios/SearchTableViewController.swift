@@ -4,7 +4,7 @@ import SDWebImage
 
 class SearchTableViewController: UITableViewController {
   
-  var experiences = [Experience]() //Injectable
+  var experiences = [Experience]()
   var hits: [Hit]?
   var searchText: String?
   
@@ -34,7 +34,9 @@ class SearchTableViewController: UITableViewController {
   override internal func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showResultsSegue" {
       if let viewController = segue.destination as? ResultTableViewController {
-        viewController.viewTitle = searchText!
+        if let searchText = searchText {
+          viewController.viewTitle = searchText
+        }
         viewController.hits = hits
       }
     }
@@ -90,7 +92,7 @@ class SearchTableViewController: UITableViewController {
       PackerClient.instance.searchExperience(url: experiences[indexPath.row].url) { result in
         Alert.hideProgress()
         switch(result) {
-        case .success(let response): print("ok")
+        case .success(let response): self.handleSuccess(response: response as! [Hit])
         case .error(let title, let message): self.handleError(title: title, message: message)
         }
       }
