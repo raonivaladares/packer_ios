@@ -96,14 +96,14 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="SYZ-0X-zyp"/>
                     <connections>
-                        <segue destination="Wpl-S4-4rq" kind="show" identifier="showResultsSegue" id="avH-ZC-5R8"/>
+                        <segue destination="Rzq-oy-fOe" kind="show" identifier="showResultsSegue" id="POc-tb-7qZ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PcL-WT-QVe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1344.5" y="36.5"/>
         </scene>
-        <!--Result Table View Controller-->
+        <!--Item-->
         <scene sceneID="br8-Az-Nqv">
             <objects>
                 <tableViewController id="Wpl-S4-4rq" customClass="ResultTableViewController" customModule="packer_ios" customModuleProvider="target" sceneMemberID="viewController">
@@ -285,10 +285,48 @@
                             <outlet property="delegate" destination="Wpl-S4-4rq" id="XrU-Tl-Mwe"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="oVM-DD-Szm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="amG-Td-VL9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2152.8000000000002" y="36.431784107946029"/>
+            <point key="canvasLocation" x="2727" y="757"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="1we-Cb-pQo">
+            <objects>
+                <viewController id="FTc-iz-2eM" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Bco-zg-WFR"/>
+                        <viewControllerLayoutGuide type="bottom" id="3mw-jn-rt5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iax-pE-Oum">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="Z9e-bf-vRw"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rdD-N8-u9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2728" y="1433"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Z3i-gu-PvS">
+            <objects>
+                <tabBarController id="Rzq-oy-fOe" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="np3-pe-bmw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="FTc-iz-2eM" kind="relationship" relationship="viewControllers" id="SjQ-ka-l4s"/>
+                        <segue destination="Wpl-S4-4rq" kind="relationship" relationship="viewControllers" id="uLa-Cw-2w0"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kjr-KO-qYK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1776" y="1106"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ykW-Ce-6b9">

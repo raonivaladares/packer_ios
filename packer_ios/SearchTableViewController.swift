@@ -33,12 +33,14 @@ class SearchTableViewController: UITableViewController {
   // ---------------------------------------------------------------------------
   override internal func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     if segue.identifier == "showResultsSegue" {
-      if let viewController = segue.destination as? ResultTableViewController {
-        if let searchText = searchText {
-          viewController.viewTitle = searchText
-        }
-        viewController.hits = hits
+      
+      let tabBarController = segue.destination as! UITabBarController
+      let destinationViewController = tabBarController.viewControllers?[1] as! ResultTableViewController
+      if let searchText = searchText {
+        destinationViewController.viewTitle = searchText
       }
+      destinationViewController.hits = hits
+      
     }
   }
   
