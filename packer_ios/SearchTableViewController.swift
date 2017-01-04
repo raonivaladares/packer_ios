@@ -35,7 +35,7 @@ class SearchTableViewController: UITableViewController {
     if segue.identifier == "showResultsSegue" {
       
       let tabBarController = segue.destination as! UITabBarController
-      let destinationViewController = tabBarController.viewControllers?[1] as! ResultTableViewController
+      let destinationViewController = tabBarController.viewControllers?.first as! ResultTableViewController
       if let searchText = searchText {
         destinationViewController.viewTitle = searchText
       }
